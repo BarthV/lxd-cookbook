@@ -1,0 +1,12 @@
+# THIS SERVICE IS MANAGED BY CHEF !
+# ALL CHANGES ON THIS FILE WILL BE LOST
+
+description "LXD API daemon"
+
+# Make sure we start after lxc
+start on (started lxc and started lxc-net)
+stop on runlevel [!023456]
+
+script
+  exec <%= node['go']['gobin'] -%>/lxd --group lxd --tcp <%= node['lxd']['tcp_ip'] -%>:<%= node['lxd']['tcp_port'] -%> 2>&1 >> <%= node['lxd']['logdir'] -%>/lxd.log
+end script

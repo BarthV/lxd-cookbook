@@ -47,6 +47,7 @@ include_recipe 'lxd::lxd_from_package'
 #### Source
 
 Install node from sources:
+
 ```chef
 node['lxd']['install_method'] = 'source'
 include_recipe 'lxd'
@@ -59,4 +60,5 @@ include_recipe 'lxd::lxd_from_source'
 Licensed under the Apache License, Version 2.0.
 
 Authors :
+
 * Barthelemy Vessemont (<bvessemont@gmail.com>)

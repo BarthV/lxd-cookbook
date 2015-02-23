@@ -9,11 +9,14 @@
 include_recipe 'apt'
 
 apt_repository 'lxd-daily' do
-  uri 'ppa:ubuntu-lxc/lxd-daily'
+  uri node['lxd']['repo']
   distribution node['lsb']['codename']
 end
 
 package 'lxd'
+
+# lxd package is currently using hardcoded root user in upstart script
+node.override['lxd']['subuser'] = 'root'
 
 ['/etc/subuid', '/etc/subgid'].each do |subid|
   template subid do
