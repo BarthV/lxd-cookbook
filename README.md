@@ -11,6 +11,7 @@ Installs and runs LXD API daemon, LXC CLI tool.
 * Ubuntu 14.04
 
 Should work perfectly with upper Ubuntu releases.
+
 May work with other OS when building from sources.
 
 ## Attributes
