@@ -1,5 +1,5 @@
 # [lxd-cookbook](https://github.com/BarthV/lxd-cookbook)
-[![CK Version](http://img.shields.io/cookbook/v/lxd.svg)](https://supermarket.getchef.com/cookbooks/lxd) [![Build Status](https://img.shields.io/travis/BarthV/lxd.svg)](https://travis-ci.org/BarthV/lxd-cookbook)
+[![CK Version](http://img.shields.io/cookbook/v/lxd.svg)](https://supermarket.getchef.com/cookbooks/lxd) [![Travis](https://img.shields.io/travis/joyent/node.svg)](https://travis-ci.org/BarthV/lxd-cookbook)
 [![Gitter chat](https://badges.gitter.im/BarthV/lxd.png)](https://gitter.im/BarthV/lxd)
 
 ## DESCRIPTION
