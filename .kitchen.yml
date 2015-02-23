@@ -1,0 +1,24 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+  customize:
+    memory: 512
+    cpus: 4
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: package
+    run_list:
+    - recipe[lxd]
+  - name: source
+    run_list:
+    - recipe[lxd]
+    attributes:
+      lxd:
+        install_method: source 
