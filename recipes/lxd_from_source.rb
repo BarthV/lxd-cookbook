@@ -12,7 +12,7 @@ include_recipe 'golang'
 
 group 'lxd' do
   system true
-  members [node['lxd']['user']]
+  members [node['lxd']['users']]
 end
 
 [node['lxd']['home'], File.join(node['lxd']['home'], 'lxc')].each do |d|
@@ -34,7 +34,7 @@ end
 execute 'build-lxd' do
   command 'go get -v -d ./... && make'
   environment(
-    'PATH' => "#{node['go']['install_dir']}/go/bin:#{ENV["PATH"]}",
+    'PATH' => "#{node['go']['install_dir']}/go/bin:#{ENV['PATH']}",
     'GOPATH' => node['go']['gopath'],
     'GOBIN' => node['go']['gobin']
   )
@@ -65,8 +65,8 @@ service 'lxd' do
 end
 
 logrotate_app 'lxd' do
-  path      File.join(node['lxd']['logdir'], 'lxd.log')
+  path File.join(node['lxd']['logdir'], 'lxd.log')
   frequency 'daily'
-  create    "644 #{node['lxd']['user']} #{node['lxd']['user']}"
-  rotate    node['lxd']['logdays']
+  create "644 #{node['lxd']['user']} #{node['lxd']['user']}"
+  rotate node['lxd']['logdays']
 end
