@@ -12,7 +12,8 @@ include_recipe 'golang'
 
 group 'lxd' do
   system true
-  append [node['lxd']['user']]
+  append true 
+  members [node['lxd']['user']]
 end
 
 [node['lxd']['home'], File.join(node['lxd']['home'], 'lxc')].each do |d|
