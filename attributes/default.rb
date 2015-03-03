@@ -3,6 +3,10 @@ default['lxd']['install_method'] = 'package'
 default['lxd']['user'] = 'root'
 default['lxd']['home'] = '/var/lib/lxd'
 
+default['lxd']['packages'] = %w(
+  acl pxz xz-utils python-lzma cgroup-bin libpam-systemd
+)
+
 default['lxd']['subuser'] = node['lxd']['user']
 default['lxd']['subid'] = '1000000'
 default['lxd']['subcount'] = '65536'

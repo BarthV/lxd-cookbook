@@ -12,22 +12,45 @@ Installs and runs LXD API daemon, LXC CLI tool.
 
 Should work perfectly with upper Ubuntu releases.
 
-May work with other OS when building from sources.
+May work with other OS when building from sources, PR are welcome !
 
 ## Attributes
 
 <table>
   <tr>
     <th>Key</th>
-    <th>Type</th>
     <th>Description</th>
     <th>Default</th>
   </tr>
   <tr>
     <td><tt>['lxd']['install_method']</tt></td>
-    <td>string</td>
     <td>Install method (source/package)</td>
-    <td><tt>package</tt></td>
+    <td><tt>'package'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['lxd']['repo']</tt></td>
+    <td>ppa target (package install)</td>
+    <td><tt>'ppa:ubuntu-lxc/lxd-daily'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['lxd']['tcp_ip']</tt></td>
+    <td>API bind IP (source install)</td>
+    <td><tt>'127.0.0.1'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['lxd']['tcp_port']</tt></td>
+    <td>API bind port (source install)</td>
+    <td><tt>'8443'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['lxd']['logdir']</tt></td>
+    <td>log directory (source install)</td>
+    <td><tt>'/var/log/lxd'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['lxd']['logdays']</tt></td>
+    <td>log retention in days (source install)</td>
+    <td><tt>31</tt></td>
   </tr>
 </table>
 
