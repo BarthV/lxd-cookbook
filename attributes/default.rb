@@ -18,7 +18,7 @@ default['lxd']['repo'] = 'ppa:ubuntu-lxc/lxd-daily'
 default['lxd']['tcp_ip'] = '127.0.0.1'
 default['lxd']['tcp_port'] = '8443'
 default['lxd']['gosrc'] = 'github.com/lxc/lxd'
-default['lxd']['packages'] = %w(
+default['lxd']['src_packages'] = %w(
   lxc lxc-dev mercurial git pkg-config
 )
 default['lxd']['logdir'] = '/var/log/lxd'

@@ -27,6 +27,10 @@ node['lxd']['packages'].each do |pkg|
   package pkg
 end
 
+node['lxd']['src_packages'].each do |pkg|
+  package pkg
+end
+
 golang_package node['lxd']['gosrc'] do
   action :update
   notifies :run, 'execute[build-lxd]', :immediate
