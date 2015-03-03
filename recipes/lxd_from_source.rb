@@ -12,7 +12,7 @@ include_recipe 'golang'
 
 group 'lxd' do
   system true
-  append true 
+  append true
   members [node['lxd']['user']]
 end
 
@@ -28,7 +28,7 @@ node['lxd']['packages'].each do |pkg|
 end
 
 golang_package node['lxd']['gosrc'] do
-  action :install
+  action :update
   notifies :run, 'execute[build-lxd]', :immediate
 end
 
