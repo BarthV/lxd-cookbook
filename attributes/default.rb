@@ -4,7 +4,8 @@ default['lxd']['user'] = 'root'
 default['lxd']['home'] = '/var/lib/lxd'
 
 default['lxd']['packages'] = %w(
-  acl pxz xz-utils python-lzma cgroup-bin libpam-systemd
+  acl xzip tar rsync pxz xz-utils
+  python-lzma cgroup-bin libpam-systemd
 )
 
 default['lxd']['subuser'] = node['lxd']['user']
@@ -18,8 +19,9 @@ default['lxd']['repo'] = 'ppa:ubuntu-lxc/lxd-daily'
 default['lxd']['tcp_ip'] = '127.0.0.1'
 default['lxd']['tcp_port'] = '8443'
 default['lxd']['gosrc'] = 'github.com/lxc/lxd'
-default['lxd']['packages'] = %w(
-  lxc lxc-dev mercurial git pkg-config
+default['lxd']['src_packages'] = %w(
+  lxc lxc-dev mercurial git pkg-config protobuf-compiler golang-goprotobuf-dev
 )
+# protobuf-compiler golang-goprotobuf-dev
 default['lxd']['logdir'] = '/var/log/lxd'
 default['lxd']['logdays'] = 31

@@ -27,15 +27,19 @@ node['lxd']['packages'].each do |pkg|
   package pkg
 end
 
+node['lxd']['src_packages'].each do |pkg|
+  package pkg
+end
+
 golang_package node['lxd']['gosrc'] do
   action :update
   notifies :run, 'execute[build-lxd]', :immediate
 end
 
 execute 'build-lxd' do
-  command 'go get -v -d ./... && make'
+  command 'go get -v -u -d ./... && make'
   environment(
-    'PATH' => "#{node['go']['install_dir']}/go/bin:#{ENV['PATH']}",
+    'PATH' => "#{node['go']['install_dir']}/go/bin:#{node['go']['gobin']}:#{ENV['PATH']}",
     'GOPATH' => node['go']['gopath'],
     'GOBIN' => node['go']['gobin']
   )
