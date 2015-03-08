@@ -8,8 +8,8 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
 
-ClassLength:
-  Enabled: false
+#ClassLength:
+#  Enabled: false
 Documentation:
   Enabled: false
 Encoding:
@@ -18,11 +18,11 @@ HashSyntax:
   Enabled: false
 LineLength:
   Enabled: false
-MethodLength:
-  Enabled: false
+#MethodLength:
+#  Enabled: false
 SignalException:
   Enabled: false
-TrailingComma:
-  Enabled: false
-WordArray:
-  Enabled: false
+#TrailingComma:
+#  Enabled: false
+#WordArray:
+#  Enabled: false
