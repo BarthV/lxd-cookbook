@@ -13,4 +13,4 @@ apt_repository 'lxd-daily' do
   distribution node['lsb']['codename']
 end
 
-package 'lxc'
+package 'lxd-client'
