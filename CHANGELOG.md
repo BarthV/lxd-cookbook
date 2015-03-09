@@ -1,6 +1,10 @@
 lxd Cookbook CHANGELOG
 ======================
 
+v0.2.4 (unreleased)
+-------------------
+- Adding client-only install recipe (client.rb) from source & package
+
 v0.2.2
 -------------------
 - Adding protoc dependencies

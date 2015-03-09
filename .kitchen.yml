@@ -26,3 +26,12 @@ suites:
         install_method: 'source'
         tcp_ip: '0.0.0.0'
         tcp_port: '8443'
+  - name: client-package
+    run_list:
+    - recipe[lxd::client]
+  - name: client-source
+    run_list:
+    - recipe[lxd::client]
+    attributes:
+      lxd:
+        install_method: 'source'
