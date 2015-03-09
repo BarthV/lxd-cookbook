@@ -5,6 +5,8 @@ driver_config:
   customize:
     memory: 2048
     cpus: 4
+  network:
+    - ["forwarded_port", {guest: 8443, host: 8443}]
 
 provisioner:
   name: chef_zero
@@ -21,4 +23,6 @@ suites:
     - recipe[lxd]
     attributes:
       lxd:
-        install_method: source 
+        install_method: 'source'
+        tcp_ip: '0.0.0.0'
+        tcp_port: '8443'
