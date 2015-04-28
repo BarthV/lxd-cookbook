@@ -13,7 +13,7 @@ default['lxd']['subid'] = '1000000'
 default['lxd']['subcount'] = '65536'
 
 # package install cfg
-default['lxd']['repo'] = 'ppa:ubuntu-lxc/lxd-daily'
+default['lxd']['repo'] = 'ppa:ubuntu-lxc/lxd-git-master'
 
 # source install cfg
 default['lxd']['tcp_ip'] = '127.0.0.1'
