@@ -1,9 +1,13 @@
 lxd Cookbook CHANGELOG
 ======================
 
-v0.2.4 (unreleased)
+v0.2.6 (unreleased)
+-------------------
+
+v0.2.4
 -------------------
 - Adding client-only install recipe (client.rb) from source & package
+- Changing default ppa repo for lxd
 
 v0.2.2
 -------------------
