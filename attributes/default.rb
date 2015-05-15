@@ -14,6 +14,7 @@ default['lxd']['subcount'] = '65536'
 
 # package install cfg
 default['lxd']['repo'] = 'ppa:ubuntu-lxc/lxd-git-master'
+default['lxd']['lxc-repo'] = 'ppa:ubuntu-lxc/lxc-stable' # Set nil to use OS default packages
 
 # source install cfg
 default['lxd']['tcp_ip'] = '127.0.0.1'

@@ -17,4 +17,5 @@
 # limitations under the License.
 #
 
+include_recipe 'lxd::lxc'
 include_recipe "lxd::lxd_from_#{node['lxd']['install_method']}"

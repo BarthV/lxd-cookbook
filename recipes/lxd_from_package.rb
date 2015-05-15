@@ -8,7 +8,7 @@
 
 include_recipe 'apt'
 
-apt_repository 'lxd-daily' do
+apt_repository 'lxd' do
   uri node['lxd']['repo']
   distribution node['lsb']['codename']
 end
