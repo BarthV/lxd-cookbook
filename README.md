@@ -4,7 +4,7 @@
 
 ## DESCRIPTION
 
-Installs and runs LXD API daemon, LXC CLI tool.
+Installs and runs LXD API daemon, LXC and LXD CLI tool.
 
 ## Supported Platforms
 
@@ -33,6 +33,11 @@ May work with other OS when building from sources, PR are welcome !
     <td><tt>'ppa:ubuntu-lxc/lxd-daily'</tt></td>
   </tr>
   <tr>
+    <td><tt>['lxd']['lxc-repo']</tt></td>
+    <td>ppa target for lxc (package install)</td>
+    <td><tt>'ppa:ubuntu-lxc/lxc-stable'</tt></td>
+  </tr>
+  <tr>
     <td><tt>['lxd']['tcp_ip']</tt></td>
     <td>API bind IP (source install)</td>
     <td><tt>'127.0.0.1'</tt></td>
@@ -53,6 +58,17 @@ May work with other OS when building from sources, PR are welcome !
     <td><tt>31</tt></td>
   </tr>
 </table>
+
+### Recipes
+
+* **lxd::default**
+    * Installs lxd following ```node['lxd']['install_method']``` method.
+
+* **lxd::client**
+    * Install lxd client tools following ```node['lxd']['install_method']``` method.
+
+* **lxd::lxc**
+    * Setup lxc repo using ```node['lxd']['lxc-repo']```.
 
 ### Install methods
 
