@@ -1,8 +1,10 @@
 lxd Cookbook CHANGELOG
 ======================
 
-v0.2.6 (unreleased)
+v0.2.6
 -------------------
+- LXC install handled from official repo
+- Gemfile update
 
 v0.2.4
 -------------------
