@@ -34,7 +34,7 @@ May work with other OS when building from sources, PR are welcome !
   </tr>
   <tr>
     <td><tt>['lxd']['lxc-repo']</tt></td>
-    <td>ppa target for lxc (package install)</td>
+    <td>ppa target for lxc (both install)</td>
     <td><tt>'ppa:ubuntu-lxc/lxc-stable'</tt></td>
   </tr>
   <tr>
